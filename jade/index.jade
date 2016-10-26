@@ -1,0 +1,531 @@
+- var cat = ['Все категории','Косметика и парфюмерия ','Бытовая техника и электроника', 'Игрушки','Одежда, обувь','Украшения и акссессуары ','Развлечения','Игры','Здоровье и красота','Спорт','Онлайн гипермаркеты (озон) ','Продукты','Рестораны','Подарки и Сувениры','Отели и Туризм','Хобби','Товары для дома и сада ','Билеты в кино, театры и музеи ','Книги','Музыка','Обучение ','Благотворительность','Белье','Женщинам','Мужчинам','Детям']
+    
+- var cat_icon = ['','parfume','monitor','car','choose','finery','parachute','joystick','lips','ball','cart','purchases','knife-fork','gift','beach','hobby','window-flower','ticket','books','ball','hat','stripe','boudoir','rose','mustache','taddy']
+
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Digift главная')
+
+    body
+        .wrapper
+            .section.full_h.section_1.section_bg_fixed
+                .section_inner
+                    +main_menu()
+                    
+                    ul#tab_widget.inp_hidden()
+                        li: a#open_content.gl_link(href='#content')
+                        li: a#open_widget.gl_link(href='#widget')
+
+                    .widget_w.tabBlock(data-tab-context='#tab_widget')
+                        #content.content_holder
+                            h2.section_caption 
+                                span Мультибрендовая подарочная карта <br> 
+                                span.card_name Digift Card
+                                
+                            .promo_block
+                                .promo_buy_block
+                                    .promo_buy_slider_w
+                                        .slider_iphone
+                                            img(src='i/phone.png')
+                                        .promo_buy_slider
+                                            .slider_holder
+                                                .cardSlider
+                                                    +loop_while(2)
+                                                        .slide
+                                                            img(src='i/card_1.png')
+                                                        .slide
+                                                            img(src='i/card_2.png')
+                                                .promo_bg
+                                                    label.btn_v4.hvr-sweep-to-right.btn_white.upload_btn
+                                                        input.inp_hidden(type='file')
+                                                        span.btn_text Загрузить свое фото
+                                                .promo_price
+                                                    span 5 000 р.
+                                        
+                                    ul.promo_controls
+                                        li
+                                            a#hover_3.btn_v3.btn_filled.hvr-sweep-to-right.btn_coral.promo_btn.hoverBro(href='#' data-hover='#hover_4')
+                                                
+                                                span.btn_text Купить Digift Card
+                                        li
+                                            a#hover_4.btn_v3.hvr-sweep-to-right.btn_coral.promo_btn.hoverBro(href='#' data-hover='#hover_3')
+                                                
+                                                span.btn_text Применить Digift Card
+                                
+                                ul.promo_items
+                                    +promo_item('item_1')
+                                        .promo_step
+                                            p Купи подарочный сертификат на&nbsp;любую сумму  онлайн
+                                    +promo_item('item_2')
+                                        .promo_step
+                                            p Подари другу, отправив&nbsp;на&nbsp;e-mail
+                                    +promo_item('item_3')
+                                        .promo_step
+                                            p Он потратит подарочную карту&nbsp;в&nbsp;любом&nbsp;магазине  
+                                                a.gl_link(href='#') из каталога
+        
+                            .brand_slider
+                                .brandSlider
+                                    +loop_while(2)
+                                        .slide
+                                            a.brand_link(href='#'): img(src='i/brand_1.png')
+                                        .slide
+                                            a.brand_link(href='#'): img(src='i/brand_2.png')
+                                        .slide
+                                            a.brand_link(href='#'): img(src='i/brand_3.png')
+                                        .slide
+                                            a.brand_link(href='#'): img(src='i/brand_4.png')
+                                        .slide
+                                            a.brand_link(href='#'): img(src='i/brand_5.png')
+                                        .slide
+                                            a.brand_link(href='#'): img(src='i/brand_6.png')
+        
+                                .prevBrand.slider_btn.slider_prev.white_btn_bdr.hvr-sweep-to-right
+                                .nextBrand.slider_btn.slider_next.white_btn_bdr.hvr-sweep-to-right
+                        
+                        #widget.widget_inner
+                            h2.section_caption.widget
+                                span Digift Card — угадать с подарком легко
+                                span.i-cross.closeWidget.widget_close_btn
+
+                            p.text_center.scale_1-3
+                                a.gl_link.link_blue.example_link(href='#') Пример подарочной карты
+
+                            .card_example_block.scale_1-3
+                                .card_slider_holder
+                                    .card_envelope
+                                        img(src='i/envelope.png')
+
+                                    .card_slider
+                                        .exampleSlider
+                                            +loop_while(3)
+                                                .slide
+                                                    img(src='i/card_3.png')
+                                                .slide
+                                                    img(src='i/card_2.png')
+
+                                    .thumb_slider_w
+                                        label.btn_blue.btn_v3.example_btn.hvr-sweep-to-right.btn_filled
+                                            input.inp_hidden(type='file')
+                                            span Свое  <br> фото
+                                            span.icon_photo
+
+                                        .thumb_slider_holder
+                                            .thumbSlider
+                                                +loop_while(2)
+                                                    .slide
+                                                        img(src='i/card_3_small.png')
+                                                    .slide
+                                                        img(src='i/card_2_small.png')
+                                                    .slide
+                                                        img(src='i/card_1_small.png')
+
+                                            .prevThumb.slider_btn.slider_prev.white_btn_bdr.hvr-sweep-to-right
+                                            .nextThumb.slider_btn.slider_next.white_btn_bdr.hvr-sweep-to-right
+
+                                .card_price_holder
+                                    .example_caption.text_center Сумма
+                                    ul.price_list
+                                        +loop_while(6)
+                                            li
+                                                a.btn_v1.price_btn.btn_white_transp.priceBtn(href='#')
+                                                    span 1 000 
+                                                    span.i-rub
+
+                                        li.wide
+                                            .input_w
+                                                input.f_input.f_input_v5(placeholder='Любая от 100 до 50 000 P')
+
+                                    .example_caption.text_center Поздравление
+                                    .input_w.symbol_counter_w
+                                        textarea.f_input.f_input_v5(placeholder='Ты самая любимая!')
+                                        .symbol_counter 360 знаков
+
+                            .card_order_block.scale_1-3
+                                form(action='#')
+                                    .order_col
+                                        .example_caption.text_center Отправитель
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v5(placeholder='Имя')
+
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v5(placeholder='E-mail')
+
+                                        .input_w
+                                            input.f_input.f_input_v5(placeholder='Мобильный телефон')
+
+                                    .order_col
+                                        .example_caption.text_center Получатель
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v5(placeholder='Имя')
+
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v5()
+                                            span.placehoder_emul E-mail 
+                                                span.or или 
+                                                a.gl_link.link_blue(href='#') отправить себе
+                                        .input_w
+                                            input.f_input.f_input_v5(placeholder='Мобильный телефон')
+
+                                    .order_col
+                                        .example_caption.text_center Дата и время  доставки
+                                        .input_w
+                                            input.f_input.f_input_v5(placeholder='Сейчас')
+                                            .time_btn
+                                                span.i-clock
+
+                                        .input_w
+                                            .date_tip Срок действия: 12.12.107 — 12.12.107
+
+                                        .input_w
+                                            button.btn_v6.submit_btn.hvr-sweep-to-right.btn_filled.btn_coral Перейти к оплате
+
+                            .order_footer.scale_1-3
+                                //-.order_subscribe
+                                    label.check_emul.check_v1
+                                        input.inp_hidden(type='checkbox')
+                                        span.check_text Получать SMS уведомления о статусе заказа, бесплатно
+
+                                .order_rules
+                                    p Нажимая кнопку «Перейти к оплате», я соглашаюсь с 
+                                        a.gl_link.link_blue(href='#') Правилами
+                                        |  и 
+                                        a.gl_link.link_blue(href='#') Офертой
+
+                                    p.text_right
+                                        span.rules_card
+                                            img(src='i/mc.png')
+                                        span.rules_card
+                                            img(src='i/visa.png')
+
+                            .order_opt Хотите заказать оптом? Вам —  
+                                a.gl_link.link_blue.openAside(href='#anketa') сюда!
+
+            .section.full_h.section_2.section_bg_fixed
+                .section_inner.clearfix
+                    +main_menu('menu_light')
+                    
+                    .section_sub_caption.clr_white Подарочные сертификаты Digift Card  <br>  для бизнеса
+                        
+                    ul.gift_list.checkScrolling(data-scroll='90%')
+                        li Корпоративный подарок
+                        li Вознаграждение в системе мотивации
+                        li Приз в конкурсах
+                        
+                    .callback_row.checkScrolling.no_scale(data-scroll='90%')
+                        .callback_cell
+                            .callback_phone 8 800 333 07 78
+                        .callback_alter или
+                        .callback_cell
+                            span.btn_scrolled
+                                a.btn_v3.btn_filled.hvr-sweep-to-right.btn_coral.promo_btn.openAside(href='#anketa')
+                                    span.btn_text Заказать оптом
+                                
+                    ul.gift_feature_list.scale_1-2
+                        li
+                            .gift_feature.__email
+                                .gift_feature_icon.i-email(
+                            data-100p-top='transform: translate(0%,20%);'
+                            data-0p-top='transform: translate(0%,-20%)'
+                            )
+                                
+                                p Доставка  <br> на email
+                        li
+                            .gift_feature.__your-logo
+                                .gift_feature_icon.i-your-logo(
+                            data-100p-top='transform: translate(0%,20%);'
+                            data-0p-top='transform: translate(0%,-20%)'
+                            )
+                                
+                                p Брендирование
+                        li
+                            .gift_feature.__print
+                                .gift_feature_icon.i-print(
+                            data-100p-top='transform: translate(0%,20%);'
+                            data-0p-top='transform: translate(0%,-20%)'
+                            )
+                                
+                                p Печать  <br>на физическом  <br>носителе
+                        li
+                            .gift_feature.__rubl
+                                .gift_feature_icon.i-rubl(
+                            data-100p-top='transform: translate(0%,20%);'
+                            data-0p-top='transform: translate(0%,-20%)'
+                            )
+                                
+                                p Любой номинал
+                        li
+                            .gift_feature.__opt
+                                .gift_feature_icon.i-opt(
+                            data-100p-top='transform: translate(0%,20%);'
+                            data-0p-top='transform: translate(0%,-20%)'
+                            )
+                                
+                                p Оптовый заказ
+
+            .section.full_h.section_3
+                .section_inner.clearfix
+                    +main_menu()
+                    
+                .cake_section.section_bg_fixed(data-stellar-background-ratio="0.5")
+                    .section_inner
+                        .section_sub_caption На что потратить?
+
+                    .section_inner.no_scale
+                        p Обменять Digift Card можно на подарочные карты и сертификаты известных магазинов, интернет-магазинов и брендов по всей России. Это подарок с мгновенной доставкой онлайн.
+                    .section_inner
+                        .cake_controls
+                            ul.promo_controls
+                                li
+                                    a#hover_2.btn_v3.btn_filled.hvr-sweep-to-right.btn_coral.promo_btn.hoverBro(href='#' data-hover='#hover_1')
+                                        span.btn_text Купить Digift Card
+                                li
+                                    a#hover_1.btn_v3.hvr-sweep-to-right.btn_coral.promo_btn.hoverBro(href='#' data-hover='#hover_2')
+                                        span.btn_text Заказать оптом
+
+                .catalog_section
+                    .section_inner
+                        .section_sub_caption Каталог подарочных карт
+                        
+                        .catalog_search.no_scale
+                            form(action='#')
+                                .search_row
+                                    .form_cell
+                                        .input_w
+                                            span Мой город: 
+                                            .select_v1.select_holder
+                                                select.select2(data-selectbox='#sity_select')
+                                                    option(data-region="Ростовская область") Москва
+                                                    option(data-region="Ростовская область") Ростов-На-Дону
+                                        #sity_select.select_dropdown.select_dropdown_v1
+
+                                    .form_cell
+                                        input.f_input.f_input_v1.input_w(placeholder='Поиск по брендам:')
+                                        button.btn_v5.i-search
+                                        
+                        .catalog_filter_holder.no_scale 
+                            ul.catalog_filter.checkScrolling(data-scroll='90%')
+                                each item, i in cat
+                                    li
+                                        .filter_item
+                                            a.filter_link(href='#')
+                                                - if (cat_icon[i].length > 0)
+                                                    span.filter_icon(class= 'i-' + cat_icon[i])
+                                                span=item
+                            
+                            ul.cat_listing
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_1.png')
+                                        p Lego
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_2.png')
+                                        p Samsung
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_3.png')
+                                        p Sony
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_4.png')
+                                        p ГлавТурОператор
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_5.png')
+                                        p A1 Triatlon
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_6.png')
+                                        p Nike
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_7.png')
+                                        p M Видео
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_8.png')
+                                        p Май
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_9.png')
+                                        p Вото.ня
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_10.png')
+                                        p НКС
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_11.png')
+                                        p VIPTOURS
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_12.png')
+                                        p Музторг
+                                    
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_13.png')
+                                        p Apple
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_14.png')
+                                        p Дочки -  Сыночки
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_15.png')
+                                        p INTERSPORT
+                                    
+                                li 
+                                    .cat_item
+                                        a.cat_logo(href='#')
+                                            span.cat_select_btn Выбрать
+                                            img(src='i/cat_16.png')
+                                        p UNo de 50
+                                        
+            .section.full_h.section_4
+                .section_inner.clearfix
+                    +main_menu()
+                    .section_inner
+                        .section_sub_caption Мультикарта Digift Card
+
+                        .section_info Универсальный подарок друзьям, близким, коллегам.
+
+                .multi_section(data_-stellar-background-ratio="0.3")
+                    .section_inner
+                        .cake_controls
+                            ul.promo_controls
+                                li
+                                    a#hover_5.btn_v3.btn_filled.hvr-sweep-to-right.btn_coral.promo_btn.hoverBro(href='#' data-hover='#hover_6')
+                                        span.btn_text Купить Digift Card
+                                li
+                                    a#hover_6.btn_v3.hvr-sweep-to-right.btn_coral.promo_btn.hoverBro.openAside(href='#anketa' data-hover='#hover_5')
+                                        span.btn_text Заказать оптом
+                                        
+                .section_inner.no_scale
+                    ul.multi_features
+                        li 
+                            .multi_feature Купить мультибрендовую подарочную карту можно онлайн всего за 2 минуты. Подарок моментально придет на email!
+                        li 
+                            .multi_feature Получатель сам выберет, на что потратить Digift Card и обменяет ее на подарочный сертификат любимого бренда из нашего каталога.
+                        li 
+                            .multi_feature Купить подарочный сертификат Digift card можно на любую сумму – стоимость гибкая.
+                                
+                .section_inner
+                    .section_sub_caption FAQ — часто задаваемые вопросы
+                        
+                .section_inner.no_scale
+                    .edged_caption.mod_1 Покупка и отправка
+                    
+                    .faq_list_holder
+                        ul.faq_list
+                            +loop_while(2)
+                                li  
+                                    .faq_block
+                                        .faq_item
+                                            .faq_caption.faqCaption Как сделать подарок индивидуальным?
+                                                
+                                            .faq_text.faqText
+                                                p Digift создан для того, чтобы Ваши клиенты могли купить и отправить подарочные карты Вашего бренда онлайн. Решение позволит покупателям сэкономить время на поиске подарка, оформить мгновенную доставку карты или вручить ее лично. Также они смогут создать индивидуальный дизайн карты и выбрать подходящий номинал. 
+                                        .faq_item
+                                            .faq_caption.faqCaption Какие способы оплаты возможны?
+                                                
+                                            .faq_text.faqText
+                                                p Digift создан для того, чтобы Ваши клиенты могли купить и отправить подарочные карты Вашего бренда онлайн. Решение позволит покупателям сэкономить время на поиске подарка, оформить мгновенную доставку карты или вручить ее лично. Также они смогут создать индивидуальный дизайн карты и выбрать подходящий номинал. 
+                                                p Digift создан для того, чтобы Ваши клиенты могли купить и отправить подарочные карты Вашего бренда онлайн. Решение позволит покупателям сэкономить время на поиске подарка, оформить мгновенную доставку карты или вручить ее лично. Также они смогут создать индивидуальный дизайн карты и выбрать подходящий номинал. 
+                                        .faq_item
+                                            .faq_caption.faqCaption Есть ли дополнительные сборы, связанные с покупкой карты? 
+                                                
+                                            .faq_text.faqText
+                                                p Digift создан для того, чтобы Ваши клиенты могли купить и отправить подарочные карты Вашего бренда онлайн. Решение позволит покупателям сэкономить время на поиске подарка, оформить мгновенную доставку карты или вручить ее лично. Также они смогут создать индивидуальный дизайн карты и выбрать подходящий номинал. 
+                                        .faq_item
+                                            .faq_caption.faqCaption Я хочу вручить электронную карту лично в качестве подарка. Как это сделать?
+                                                
+                                            .faq_text.faqText
+                                                p Digift создан для того, чтобы Ваши клиенты могли купить и отправить подарочные карты Вашего бренда онлайн. Решение позволит покупателям сэкономить время на поиске подарка, оформить мгновенную доставку карты или вручить ее лично. Также они смогут создать индивидуальный дизайн карты и выбрать подходящий номинал. 
+                                                
+                        .text_center.see_more
+                            a.gl_link.link_blue(href='#') Еще вопросы
+
+            .footer.no_scale
+                .section_inner.clearfix
+                    .f_subscribe_block
+                        p Узнавай первым о наших акциях
+                        form(action='#')
+                            .input_w
+                                input.f_input.f_input_v2(placeholder='Ваш email')
+                        ul.f_soc
+                            li
+                                a.gl_link.i-facebook(href='#')
+                            li
+                                a.gl_link.i-linked_in(href='#')
+                            li
+                                a.gl_link(href='#') О компании
+                            
+                    .f_logo_holder
+                        a.logo(href='#')
+                            img(src='i/logo.png')
+                    
+                    .f_copyright
+                        p &nbsp;
+                        .f_phone 8 800 333 07 78
+                        p «Digift -  электронные подарочные карты и сертификаты
+                        
+            .go_top_holder
+                .section_inner
+                    a.go_top_btn.hvr-sweep-to-right.btn_white_fill.goTop(href='#')
+            
+            +aside_right()
+            +aside_anketa()
+                    
+        +popups()
+        +scripts()

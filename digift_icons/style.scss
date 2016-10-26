@@ -1,0 +1,337 @@
+@import "variables";
+
+@font-face {
+  font-family: 'digift_icons';
+  src:  url('#{$icomoon-font-path}/digift_icons.eot?b4qvof');
+  src:  url('#{$icomoon-font-path}/digift_icons.eot?b4qvof#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/digift_icons.ttf?b4qvof') format('truetype'),
+    url('#{$icomoon-font-path}/digift_icons.woff?b4qvof') format('woff'),
+    url('#{$icomoon-font-path}/digift_icons.svg?b4qvof#digift_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'digift_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-cross {
+  &:before {
+    content: $i-cross;
+  }
+}
+.i-doc_xls {
+  &:before {
+    content: $i-doc_xls;
+  }
+}
+.i-check {
+  &:before {
+    content: $i-check;
+  }
+}
+.i-arrow_left {
+  &:before {
+    content: $i-arrow_left;
+  }
+}
+.i-arrow_right {
+  &:before {
+    content: $i-arrow_right;
+  }
+}
+.i-chevron_left {
+  &:before {
+    content: $i-chevron_left;
+  }
+}
+.i-chevron_right {
+  &:before {
+    content: $i-chevron_right;
+  }
+}
+.i-email {
+  &:before {
+    content: $i-email;
+  }
+}
+.i-facebook {
+  &:before {
+    content: $i-facebook;
+  }
+}
+.i-go_top {
+  &:before {
+    content: $i-go_top;
+  }
+}
+.i-linked_in {
+  &:before {
+    content: $i-linked_in;
+  }
+}
+.i-question {
+  &:before {
+    content: $i-question;
+  }
+}
+.i-opt {
+  &:before {
+    content: $i-opt;
+  }
+}
+.i-print {
+  &:before {
+    content: $i-print;
+  }
+}
+.i-rubl {
+  &:before {
+    content: $i-rubl;
+  }
+}
+.i-search {
+  &:before {
+    content: $i-search;
+  }
+}
+.i-your-logo {
+  &:before {
+    content: $i-your-logo;
+  }
+}
+.i-sound {
+  &:before {
+    content: $i-sound;
+  }
+}
+.i-boudoir {
+  &:before {
+    content: $i-boudoir;
+  }
+}
+.i-ticket {
+  &:before {
+    content: $i-ticket;
+  }
+}
+.i-stripe {
+  &:before {
+    content: $i-stripe;
+  }
+}
+.i-taddy {
+  &:before {
+    content: $i-taddy;
+  }
+}
+.i-window-flower {
+  &:before {
+    content: $i-window-flower;
+  }
+}
+.i-rose {
+  &:before {
+    content: $i-rose;
+  }
+}
+.i-lips {
+  &:before {
+    content: $i-lips;
+  }
+}
+.i-car {
+  &:before {
+    content: $i-car;
+  }
+}
+.i-joystick {
+  &:before {
+    content: $i-joystick;
+  }
+}
+.i-cart {
+  &:before {
+    content: $i-cart;
+  }
+}
+.i-books {
+  &:before {
+    content: $i-books;
+  }
+}
+.i-mustache {
+  &:before {
+    content: $i-mustache;
+  }
+}
+.i-knife-fork {
+  &:before {
+    content: $i-knife-fork;
+  }
+}
+.i-choose {
+  &:before {
+    content: $i-choose;
+  }
+}
+.i-parfume {
+  &:before {
+    content: $i-parfume;
+  }
+}
+.i-gift {
+  &:before {
+    content: $i-gift;
+  }
+}
+.i-parachute {
+  &:before {
+    content: $i-parachute;
+  }
+}
+.i-purchases {
+  &:before {
+    content: $i-purchases;
+  }
+}
+.i-beach {
+  &:before {
+    content: $i-beach;
+  }
+}
+.i-ball {
+  &:before {
+    content: $i-ball;
+  }
+}
+.i-finery {
+  &:before {
+    content: $i-finery;
+  }
+}
+.i-hat {
+  &:before {
+    content: $i-hat;
+  }
+}
+.i-hobby {
+  &:before {
+    content: $i-hobby;
+  }
+}
+.i-monitor {
+  &:before {
+    content: $i-monitor;
+  }
+}
+.i-clock {
+  &:before {
+    content: $i-clock;
+  }
+}
+.i-logo .path1 {
+  &:before {
+    content: $i-logo-path1;  
+    color: rgb(114, 206, 155);
+  }
+}
+.i-logo .path2 {
+  &:before {
+    content: $i-logo-path2;  
+    margin-left: -1.0078125em;  
+    color: rgb(15, 91, 223);
+  }
+}
+.i-logo .path3 {
+  &:before {
+    content: $i-logo-path3;  
+    margin-left: -1.0078125em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.i-logo .path4 {
+  &:before {
+    content: $i-logo-path4;  
+    margin-left: -1.0078125em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.i-logo .path5 {
+  &:before {
+    content: $i-logo-path5;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path6 {
+  &:before {
+    content: $i-logo-path6;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path7 {
+  &:before {
+    content: $i-logo-path7;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path8 {
+  &:before {
+    content: $i-logo-path8;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path9 {
+  &:before {
+    content: $i-logo-path9;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path10 {
+  &:before {
+    content: $i-logo-path10;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path11 {
+  &:before {
+    content: $i-logo-path11;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-logo .path12 {
+  &:before {
+    content: $i-logo-path12;  
+    margin-left: -1.0078125em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.i-my_photo {
+  &:before {
+    content: $i-my_photo;
+  }
+}
+.i-rub {
+  &:before {
+    content: $i-rub;
+  }
+}
+

@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'digift_icons';
+  src:  url('fonts/digift_icons.eot?b4qvof');
+  src:  url('fonts/digift_icons.eot?b4qvof#iefix') format('embedded-opentype'),
+    url('fonts/digift_icons.ttf?b4qvof') format('truetype'),
+    url('fonts/digift_icons.woff?b4qvof') format('woff'),
+    url('fonts/digift_icons.svg?b4qvof#digift_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'digift_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-cross:before {
+  content: "\e90b";
+}
+.i-doc_xls:before {
+  content: "\e939";
+}
+.i-check:before {
+  content: "\e901";
+}
+.i-arrow_left:before {
+  content: "\e925";
+}
+.i-arrow_right:before {
+  content: "\e92b";
+}
+.i-chevron_left:before {
+  content: "\e92c";
+}
+.i-chevron_right:before {
+  content: "\e92d";
+}
+.i-email:before {
+  content: "\e92e";
+}
+.i-facebook:before {
+  content: "\e92f";
+}
+.i-go_top:before {
+  content: "\e930";
+}
+.i-linked_in:before {
+  content: "\e931";
+}
+.i-question:before {
+  content: "\e932";
+}
+.i-opt:before {
+  content: "\e933";
+}
+.i-print:before {
+  content: "\e934";
+}
+.i-rubl:before {
+  content: "\e935";
+}
+.i-search:before {
+  content: "\e936";
+}
+.i-your-logo:before {
+  content: "\e937";
+}
+.i-sound:before {
+  content: "\e902";
+}
+.i-boudoir:before {
+  content: "\e912";
+}
+.i-ticket:before {
+  content: "\e913";
+}
+.i-stripe:before {
+  content: "\e914";
+}
+.i-taddy:before {
+  content: "\e915";
+}
+.i-window-flower:before {
+  content: "\e916";
+}
+.i-rose:before {
+  content: "\e917";
+}
+.i-lips:before {
+  content: "\e918";
+}
+.i-car:before {
+  content: "\e919";
+}
+.i-joystick:before {
+  content: "\e91a";
+}
+.i-cart:before {
+  content: "\e91b";
+}
+.i-books:before {
+  content: "\e91c";
+}
+.i-mustache:before {
+  content: "\e91d";
+}
+.i-knife-fork:before {
+  content: "\e91e";
+}
+.i-choose:before {
+  content: "\e91f";
+}
+.i-parfume:before {
+  content: "\e920";
+}
+.i-gift:before {
+  content: "\e921";
+}
+.i-parachute:before {
+  content: "\e922";
+}
+.i-purchases:before {
+  content: "\e923";
+}
+.i-beach:before {
+  content: "\e924";
+}
+.i-ball:before {
+  content: "\e926";
+}
+.i-finery:before {
+  content: "\e927";
+}
+.i-hat:before {
+  content: "\e928";
+}
+.i-hobby:before {
+  content: "\e929";
+}
+.i-monitor:before {
+  content: "\e92a";
+}
+.i-clock:before {
+  content: "\e900";
+}
+.i-logo .path1:before {
+  content: "\e903";
+  color: rgb(114, 206, 155);
+}
+.i-logo .path2:before {
+  content: "\e904";
+  margin-left: -1.0078125em;
+  color: rgb(15, 91, 223);
+}
+.i-logo .path3:before {
+  content: "\e905";
+  margin-left: -1.0078125em;
+  color: rgb(0, 0, 0);
+}
+.i-logo .path4:before {
+  content: "\e906";
+  margin-left: -1.0078125em;
+  color: rgb(0, 0, 0);
+}
+.i-logo .path5:before {
+  content: "\e907";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path6:before {
+  content: "\e908";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path7:before {
+  content: "\e909";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path8:before {
+  content: "\e90a";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path9:before {
+  content: "\e90c";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path10:before {
+  content: "\e90d";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path11:before {
+  content: "\e90e";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-logo .path12:before {
+  content: "\e90f";
+  margin-left: -1.0078125em;
+  color: rgb(255, 255, 255);
+}
+.i-my_photo:before {
+  content: "\e910";
+}
+.i-rub:before {
+  content: "\e911";
+}
+

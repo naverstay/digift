@@ -1,0 +1,155 @@
+.footer {
+  background: #fff;
+  padding-top: 20 * $m;
+  padding-bottom: 50 * $m;
+  border-top: 1px solid #c8c8c8;
+  text-align: center;
+  color: #666;
+
+  .section_inner {
+    max-width: 70.5em;
+  }
+
+  p {
+    font-size: 13 * $m;
+    margin-bottom: 10 * $m;
+  }
+}
+
+.f_logo_holder {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1.55em;
+}
+
+.popup {
+  background: #f4f4f4;
+  
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.f_soc {
+  @extend %clearfix;
+
+  > li {
+    float: left;
+    padding-right: .65em;
+    padding-top: .65em;
+  }
+
+  .gl_link {
+    color: #6e6e6e;
+    font-size: 14 * $m;
+  }
+}
+
+.rect_1024 {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: $content-max-w - 80;
+  border: 1px solid red;
+  pointer-events: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    background: red;
+  }
+
+}
+
+.go_top_holder {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 0;
+  top: 50%;
+  z-index: 10;
+
+  .section_inner {
+    position: relative;
+  }
+}
+
+.go_top_btn {
+  @include transition_all(opacity .3s, color .3s);
+  @extend %icon_pseudo;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 100%;
+  height: 76 * $m;
+  width: 76 * $m;
+  color: #d1d1d1;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 1, 0, .16);
+
+  &:before {
+    @extend %hor_vert_centr;
+    position: absolute;
+    content: $i-go_top;
+    font-size: 2.2em;
+  }
+
+  .show_go_top & {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.f_copyright {
+  float: right;
+  width: 41%;
+  text-align: right;
+
+  p {
+    font-size: 14 * $m;
+  }
+}
+
+.f_phone {
+  font-size: 1.375em;
+  line-height: 1.8;
+  margin-bottom: .3em;
+}
+
+.f_subscribe_block {
+  float: left;
+  width: 41%;
+  padding-left: 5.5%;
+  text-align: left;
+}
+
+.no_scale {
+  font-size: 16px;
+}
+
+.scale_1-3 {
+  //font-size: 16px;
+  @include respond-to-max-h(940px) {
+    //font-size: 1.2em;
+  }
+}
+
+.scale_1-2 {
+  @include respond-to-max-h(900px) {
+    font-size: 1.2em;
+  }
+}
+
+.chromeperfectpixel-overlay {
+  //pointer-events: none !important;
+}

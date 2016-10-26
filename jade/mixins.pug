@@ -1,0 +1,328 @@
+mixin dev_head(page_title)
+    head
+        title=page_title
+        | <!-- saved from url=(0014)about:internet -->
+        meta(charset='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="format-detection", content="telephone=no")
+        //-style
+            include ../styles/main_global.css
+        link(rel='stylesheet', href='styles/main_global.css', media='all')
+        link(href='https://fonts.googleapis.com/css?family=Ubuntu:300,400&amp;subset=cyrillic', rel='stylesheet')
+
+
+mixin loop_while(counter)
+    -i=0;
+    while i < counter
+        -i++;
+        block
+
+mixin main_menu(cls)
+    ul.main_menu(class=cls)
+        li.menu_item
+            a.menu_link.bg_green.openWidget(href='#')
+                span.link_text Для себя и близких
+        li.menu_item
+            a.menu_link.bg_blue(href='#')
+                span.link_text Для бизнеса
+        li.menu_item
+            a.menu_link.bg_red(href='#')
+                span.link_text Каталог брендов
+                
+        li.menu_item.logo_holder
+            a.logo(href='#')
+                img(src='i/logo.png')
+
+        li.menu_item.m_item_right
+            a.btn_v2.white_btn_bdr.question_btn.hvr-sweep-to-right.openAside(href='#aside_menu')
+                
+
+        li.menu_item.m_item_right
+            a.btn_v1.btn_filled.hvr-sweep-to-right.btn_coral.apply_btn.openXChangeDialog(href='#' )
+                
+                span.btn_text Применить Digift Card
+                
+        li.menu_item.m_item_right
+            a.menu_link.bg_orange.openHowItWorks(href='#')
+                span.link_text Как это работает
+
+mixin promo_item(cls)
+    li.promo_item(class=cls
+    _data-0='transform: translate(0%,20px); opacity: 0;'
+    _data-70p-top='transform: translate(0%,20px); opacity: 0;'
+    _data-10p-top='transform: translate(0%,0%); opacity: 1;'
+    )
+        block
+
+mixin aside_right()
+    #aside_menu.aside_right_holder.no_scale
+        a.aside_close_btn.asideClose(href='#')
+        .aside_right
+            .tab_holder.tabListScroller
+                ul#tab_list.tab_list.tab_v1
+                    li.tab_item: a.tab_link.hvr-sweep-to-right_.btn_v3._btn_blue(href='#tab_1'): span.mb Правила использования
+                    li.tab_item: a.tab_link.hvr-sweep-to-right_.btn_v3._btn_blue(href='#tab_2'): span.mb Оферта
+                    li.tab_item: a.tab_link.hvr-sweep-to-right_.btn_v3._btn_blue(href='#tab_3'): span.mb Помощь
+                
+            .tabBlock.tab_block(data-tab-context='#tab_list')
+                #tab_3
+                    .tab_inner
+                        .aside_caption Не нашли ответа на свой вопрос? Напишите нам!
+                        
+                        .form_holder.form_v1
+                            form(action='#')
+                                .form_row.form_cell_v2
+                                    .form_cell
+                                        label 
+                                            span Тема обращения: 
+                                            span.clr_red *
+                                            
+                                    .form_cell.form_cell_r.select_v2
+                                        select.select2(data-selectbox='#theme_select' required) 
+                                            option Использование карты
+                                            option Использование карты 2
+                                            option Использование карты 3
+                                        #theme_select.select_dropdown.select_dropdown_v1
+                                            
+                                .form_row.form_cell_v2.form_cell_half
+                                    .form_cell
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v4(placeholder='Имя'  required)
+
+                                    .form_cell
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v4(placeholder='Фамилия'  required)
+
+                                .form_row.form_cell_v2.form_cell_half
+                                    .form_cell
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v4(placeholder='E-mail'  required)
+
+                                    .form_cell
+                                        .input_w
+                                            span.cell_required *
+                                            input.f_input.f_input_v4(placeholder='Телефон'  required)
+                                            
+                                .form_row.form_cell_v2.form_cell_half
+                                    .form_cell
+                                        .input_w
+                                            input.f_input.f_input_v4(placeholder='Номер карты')
+
+                                    .form_cell
+                                        .input_w
+                                            input.f_input.f_input_v4(placeholder='Номер заказа')
+                                            
+                                .form_row.form_cell_v2.form_cell_wide
+                                    .form_cell.text_center
+                                        label
+                                            span Текст обращения:  
+                                            span.clr_red *
+
+                                    .form_cell
+                                        .input_w
+                                            textarea.f_input.f_input_v4(required)
+                                .form_row.form_cell_v2.form_cell_wide
+                                    .form_cell.text_center
+                                        .input_w
+                                            button.hvr-sweep-to-right.btn_v6.btn_blue.faq_btn.btn_filled ОК
+                                            
+                #tab_2 
+                    
+                    
+                    
+                #tab_1
+                    .tab_inner
+                        .aside_caption.rules Правила использования электронных подарочных карт и сертификатов
+                        ul.rules_list
+                            li Срок действия подарочной мультикарты составляет 6 месяцев от даты отправки.
+                            li Номинал от 500 до 50 000 рублей.
+                            li Использовать подарочную мультикарту можно для обмена на подарочные карты любимых брендов на сайте www.digift.me
+                            li Для входа на сайт необходимо ввести номер вашей Digift Card и ПИН-код.
+                            li Digift Card можно обменять на сколько угодно подарочных карт брендов-партнеров в рамках номинала.
+                            li Для приобретения товаров и услуг выбранных брендов, предъявите соответствующую карту бренда на кассе или в интернет-магазине. Непосредственно Digift Card не предназначена для использования в качестве оплаты покупки.
+                        
+mixin aside_anketa()
+    #anketa.aside_right_holder.no_scale.anketa_mode
+        a.aside_close_btn.asideClose(href='#')
+        .aside_right
+            .aside_caption.anketa Анкета корпоративного клиента
+            .aside_tip Заполните форму
+                
+            .form_holder.form_v1
+                form(action='#')
+                    .form_row.form_cell_v2.form_cell_half
+                        .form_cell
+                            .input_w
+                                span.cell_required *
+                                input.f_input.f_input_v4(placeholder='Имя'  required)
+
+                        .form_cell
+                            .input_w
+                                span.cell_required *
+                                input.f_input.f_input_v4(placeholder='Фамилия'  required)
+
+                    .form_row.form_cell_v2.form_cell_half
+                        .form_cell
+                            .input_w
+                                span.cell_required *
+                                input.f_input.f_input_v4(placeholder='Организация'  required)
+
+                        .form_cell
+                            .input_w
+                                span.cell_required *
+                                input.f_input.f_input_v4(placeholder='Должность'  required)
+                                
+                    .form_row.form_cell_v2.form_cell_half
+                        .form_cell
+                            .input_w
+                                span.cell_required *
+                                input.f_input.f_input_v4(placeholder='E-mail'  required)
+
+                        .form_cell
+                            .input_w
+                                span.cell_required *
+                                input.f_input.f_input_v4(placeholder='Телефон'  required)
+                                
+                    .form_row.form_cell_v2.form_cell_half
+                        .form_cell
+                            label
+                                span Заказ:
+                                
+                        .form_cell
+                            label
+                                span &nbsp;
+                                
+                        .form_cell
+                            .input_w
+                                input.f_input.f_input_v4(placeholder='Номинал')
+
+                        .form_cell
+                            .input_w
+                                input.f_input.f_input_v4(placeholder='Количество')
+                                
+                    .form_row.form_cell_v2.form_cell_wide
+                        .form_cell             
+                            .text_center 
+                                a.gl_link.download_link(href='#')
+                                    span Скачать форму заказа
+                                    span.i-books.download_icon
+                                
+                    .form_row.form_cell_v2.form_cell_wide
+                        .form_cell
+                            label
+                                span Комментарий:
+
+                        .form_cell
+                            .input_w
+                                textarea.f_input.f_input_v4()
+                                
+                    .form_row.form_cell_v2.form_cell_wide
+                        .form_cell.text_center
+                            .input_w
+                                button.hvr-sweep-to-right.btn_v3.btn_blue.send_btn.btn_filled Отправить
+                                
+            .anketa_features_w: ul.anketa_features
+                li
+                    .anketa_feature
+                        .anketa_icon.i-your-logo
+                        p Брендирование бесплатно!
+                li
+                    .anketa_feature
+                        .anketa_icon.i-opt
+                        p Скидки от объема заказа
+                li
+                    .anketa_feature
+                        .anketa_icon.i-monitor
+                        p Доступ в онлайн кабинет <br> управления заказами
+            
+            .aside_phones
+                span.phone 8 800 333 0778  
+                span — по рабочим дням с 10 до 19 MSK
+            
+            
+mixin popups()
+    #how_it_works_popup.popup.popup_v1
+        .popup_inner.form_cell_v1.work_flow_popup
+            .popup_caption.text_center.mod_1 Моментальный подарок с доставкой на e-mail
+            .popup_tip.mod_1.text_center Для отправителя
+                
+            ul.work_flow
+                li
+                    .work_step.step_1
+                        .work_step_ico
+                            img(src='i/step_1.png')
+                        ul.work_list 
+                            li Загрузи фотографию
+                            li Напиши текст поздравления
+                            li Распечатай и вручи лично
+                            
+                li
+                    .work_step.step_2
+                        .work_step_ico
+                            img(src='i/step_2.png')
+                        p Подарочная карта Digift Card придет на email получателя
+
+            .popup_tip.mod_1.text_center Для получателя подарка
+                
+            ul.work_flow
+                li
+                    .work_step.step_2-1
+                        .work_step_ico
+                            img(src='i/step_2-1.png')
+                        ul.work_list 
+                            li Открой электронную открытку
+                            li Введи номер телефона
+                            
+                li
+                    .work_step.step_2-2
+                        .work_step_ico
+                            img(src='i/step_2-2.png')
+                        p Введи номер карты и пин-код на сайте 
+                            a.gl_link.link_blue(href='#') www.digft.me
+                            
+                li
+                    .work_step.step_2-3
+                        .work_step_ico
+                            img(src='i/step_2-3.png')
+                        ul.work_list 
+                            li Выбери  бренд из каталога
+                            li Оформи подарочную карту
+                            
+                li
+                    .work_step.step_2-4
+                        .work_step_ico
+                            img(src='i/step_2-4.png')
+                        p Воспользуйся подарочной картой для оплаты покупок в розничных или интернет-магазинах
+                
+                    
+    #xchange_popup.popup.popup_v1
+        .popup_inner.form_cell_v1.text_center
+            .popup_caption.text_center Digift Card
+            .popup_tip.text_center Обменяйте на подарочные карты  <br>  любимых брендов
+            form(action='#')
+                .form_cell
+                    .input_w
+                        input.f_input_v3.f_input(placeholder='Номер карты  *')
+
+                .form_cell
+                    .input_w
+                        input.f_input_v3.f_input(placeholder='ПИН *')
+
+                .form_cell.text_center
+                    button.btn_v6.popup_btn.btn_blue.hvr-sweep-to-right.btn_filled Применить
+                    
+                    
+
+mixin scripts()
+    script(src='js/jquery1.10.js?no_cache')
+    script(src='js/jquery-ui-1.10.2.custom.min.js?no_cache')
+    script(src='js/skrollr.js?no_cache')
+    script(src='js/slick.js?no_cache')
+    script(src='js/stellar.js?no_cache')
+    script(src='js/select2.js?no_cache')
+    script(src='js/script.js?no_cache')
